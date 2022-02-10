@@ -1,0 +1,172 @@
+:root{
+    --color-black: #030303;
+    --color-dark-purple: #360518;
+    --color-light-blue: #5b7ef0;
+    --color-light-grey: #f2f3f5; 
+    --color-light-yellow: #fffa66;
+    --color-pink: #da5693;
+    --color-purple: #801139;
+    --color-white: #f6f6f6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, Helvetica, san-serif;
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+}
+
+h1 {
+    font-size: 300%;
+}
+@media (max-width: 575px) {
+    h1 {
+      font-size: 150%
+    }
+}
+
+p {
+    font-size: 120%;
+}
+@media (max-width: 575px) {
+    p {
+      font-size: 80%
+    }
+}
+
+a {
+    color: var(--color-light-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-purple);
+    text-decoration: none;
+
+}
+
+div {
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--color-white);
+    /*border-style: dashed;*/
+}
+
+#container {
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+@media (max-width: 750px) {
+    #container {
+       margin-top: 5px;
+   }
+ }
+
+#main {
+    background-color: var(--color-purple);
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+/* -------------- img-coffee | img-coming-soon  ----------------------*/
+
+.img-coffee {
+    margin-right: 0px;
+    transition: transform 0.3s ease-out;
+}
+.img-coffee:hover {
+    width: 220px;
+    height: 150px;
+    transform: translateX(25px);
+}
+
+.img-coming-soon {
+    margin: 0px;
+    transform: rotate(-25deg);
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+       transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+@media (max-width: 575px) {
+    .img-coffee, .img-coming-soon {
+      margin: 0px 75px;
+    }
+  }
+@media (max-width: 360px) {
+    .img-coffee, .img-coming-soon {
+      margin: 0px 15px;
+    }
+  }
+
+/* -------------- email  ----------------------*/
+
+#email {
+    background-color: var(--color-light-yellow);
+    color: var(--color-black);
+    width: 85%;
+    text-align: center;
+    margin: auto;
+    clear: both;
+    padding: 10px;
+}
+
+/* -------------- follow us on media social  ----------------------*/
+
+#follow {
+    text-align: center;
+    font-size: 80%;
+    padding: 15px;
+}
+
+#follow .img-transition {
+    margin: 1px;
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+    transition: transform 0.3s ease-out;
+}
+#follow .img-transition:hover {
+    transform: translateY(8px);
+}
+
+/* -------------- footer  ----------------------*/
+
+footer {
+    background-color: var(--color-black);
+    margin-top: 190px;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .brandname {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: var(--color-pink);
+    font-family: Princess Sofia, Calibri;
+    text-shadow: 1px 1px 8px var(--color-light-blue);
+}
+
+footer .codedby {
+    font-size: 0.9em;
+    color: var(--color-light-grey);
+}
